@@ -1,0 +1,81 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.bgvideo video
+{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.navbar-nv
+{
+    z-index: 1;
+}
+.container-fluid img
+{
+    mix-blend-mode: multiply;
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.nav-menu
+{
+    margin-left: 500px;
+    margin-top: -80px;
+}
+.nav-menu ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-menu > ul
+{
+    display: flex;
+}
+.nav-menu > ul > li
+{
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 10px 22px;
+}
+.navbar a
+{
+    display: block;
+    position: relative;
+    color: rgb(11, 104, 138);
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Roboto" sans-serif;
+    padding: 0 10px;
+}
+.navbar > ul > li a::before
+{
+    content: " ";
+    position: absolute;
+    width: 90%;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background-color: #eff6ef;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out;
+}
+.navbar a:hover::before,
+.navbar li:hover> a::before,
+.navbar .active > a::before
+{
+    visibility: visible;
+    width: 100%;
+}
+.navbar a:hover,
+.navbar li:hover >a,
+.navbar .active > a
+{
+    color: #eff6ef;
+}
